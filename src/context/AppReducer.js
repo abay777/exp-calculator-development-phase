@@ -4,15 +4,13 @@ export default (state , action) => {
             return{
                 ...state,
                 transactions:state.transactions.filter(transaction => transaction.id !==action.payload)
-            }
+            };
         case 'ADD_TRANSACTION':
-            console.log(action.payload)
-            return{
+        return{
                 ...state,
                 transactions:[ action.payload, ...state.transactions,]
                 
-            }
-        
+            };
         default:
             return state
     }
